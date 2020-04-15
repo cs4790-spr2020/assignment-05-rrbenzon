@@ -13,7 +13,7 @@ namespace BlabberApp.DataStore.Plugins
         MySqlConnection _dcUser;
         public MySqlUser()
         {
-            _dcUser = new MySqlConnection("server=142.93.114.73;database=rrbenzon;user=rrbenzon;password=letmein");
+            _dcUser = new MySqlConnection("server=142.93.114.73;database=donbstringham;user=donbstringham;password=letmein");
             try
             {
                 _dcUser.Open();
@@ -71,7 +71,6 @@ namespace BlabberApp.DataStore.Plugins
             {
                 throw new Exception(ex.ToString());
             }
-
         }
 
         public IEntity ReadById(Guid Id)
@@ -91,10 +90,9 @@ namespace BlabberApp.DataStore.Plugins
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                throw new Exception(ex.ToString() + ": Not found");
             }
         }
-
         public IEntity ReadByUserEmail(string Id)
         {
             try
@@ -112,7 +110,7 @@ namespace BlabberApp.DataStore.Plugins
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                throw new Exception(ex.ToString() + ": Not found");
             }
         }
 
@@ -135,7 +133,7 @@ namespace BlabberApp.DataStore.Plugins
 
         private User DataRow2User(DataRow row)
         {
-             User user = new User();
+            User user = new User();
 
             user.Id = new Guid(row["sys_id"].ToString());
             user.ChangeEmail(row["email"].ToString());
@@ -144,6 +142,5 @@ namespace BlabberApp.DataStore.Plugins
 
             return user;
         }
-
     }
 }

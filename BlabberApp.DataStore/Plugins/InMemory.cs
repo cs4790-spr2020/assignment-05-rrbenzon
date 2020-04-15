@@ -1,20 +1,14 @@
 ﻿using System;
 using System.Collections;
+using BlabberApp.DataStore.Interfaces;
 using BlabberApp.Domain.Entities;
 using BlabberApp.Domain.Interfaces;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using BlabberApp.DataStore.Interfaces;
-
 
 namespace BlabberApp.DataStore.Plugins
 {
     public class InMemory : IBlabPlugin, IUserPlugin
     {
-
         private ArrayList buffer;
-
         public InMemory()
         {
             this.buffer = new ArrayList();
@@ -34,29 +28,24 @@ namespace BlabberApp.DataStore.Plugins
         {
             foreach(IEntity obj in this.buffer)
             {
-                if (Id.Equals(obj.Id))
-                {
-                    return obj;
-                }
+                if (Id.Equals(obj.Id)) return obj;
             }
-            return null;
+            throw new Exception("Not found");
         }
-
         public IEnumerable ReadByUserId(string Id)
         {
-            return null;
+            throw new Exception("Not found");
         }
-
         public IEntity ReadByUserEmail(string email)
         {
             foreach(User user in buffer)
             {
-                if(user.Email.Equals(email))
+                if (user.Email.Equals(email))
                 {
                     return user;
                 }
             }
-            return null;
+            throw new Exception("Not found");
         }
 
         public void Update(IEntity obj)
