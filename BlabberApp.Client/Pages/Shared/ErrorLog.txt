@@ -1,0 +1,98 @@
+4/12/2020 4:01:33 PM- FeedModel::OnPost: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 109
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 115
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 42
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31
+4/12/2020 4:03:41 PM- FeedModel::OnPost: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 109
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 115
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 42
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31
+4/12/2020 4:04:14 PM- FeedModel::OnPost: System.Exception: MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'message' at row 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at BlabberApp.DataStore.Plugins.MySqlBlab.Create(IEntity obj) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlBlab.cs:line 42
+   at BlabberApp.DataStore.Plugins.MySqlBlab.Create(IEntity obj) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlBlab.cs:line 46
+   at BlabberApp.DataStore.Adapters.BlabAdapter.Add(Blab blab) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\BlabAdapter.cs:line 19
+   at BlabberApp.Services.BlabService.AddBlab(Blab blab) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\BlabService.cs:line 17
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 33
+4/12/2020 4:06:06 PM- FeedModel::OnPost: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 109
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 115
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 42
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31
+4/12/2020 4:07:07 PM- FeedModel::OnPost: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 109
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 115
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 42
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31
+4/12/2020 4:07:35 PM- FeedModel::OnPost: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 109
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 115
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 42
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31
+4/12/2020 4:08:02 PM- FeedModel::OnPost: System.Exception: MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'message' at row 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at BlabberApp.DataStore.Plugins.MySqlBlab.Create(IEntity obj) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlBlab.cs:line 42
+   at BlabberApp.DataStore.Plugins.MySqlBlab.Create(IEntity obj) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlBlab.cs:line 46
+   at BlabberApp.DataStore.Adapters.BlabAdapter.Add(Blab blab) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\BlabAdapter.cs:line 19
+   at BlabberApp.Services.BlabService.AddBlab(Blab blab) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\BlabService.cs:line 17
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 33
+4/12/2020 4:09:12 PM- FeedModel::OnPost: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 109
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 115
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 42
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31
+4/12/2020 4:15:28 PM- FeedModel::OnPost: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 109
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 115
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 42
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31
+4/12/2020 4:15:54 PM- FeedModel::OnPost: System.Exception: MySql.Data.MySqlClient.MySqlException (0x80004005): Data too long for column 'message' at row 1
+   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteNonQuery()
+   at BlabberApp.DataStore.Plugins.MySqlBlab.Create(IEntity obj) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlBlab.cs:line 42
+   at BlabberApp.DataStore.Plugins.MySqlBlab.Create(IEntity obj) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Plugins\MySqlBlab.cs:line 46
+   at BlabberApp.DataStore.Adapters.BlabAdapter.Add(Blab blab) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\BlabAdapter.cs:line 19
+   at BlabberApp.Services.BlabService.AddBlab(Blab blab) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\BlabService.cs:line 17
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 33

@@ -1,0 +1,16 @@
+@page
+@model BlabberApp.Client.Pages.RegisterModel
+@using BlabberApp.Services;
+@inject IUserService UserSErvice
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>@ViewData["Title"]</h1><br>
+<h2>Please register your email. You must register before posting any blabs</h2><br>
+
+<form method = "post">
+    <label> Email: </label>
+    <input type="email" name="emailaddress">
+    <input type = "submit">
+</form>
