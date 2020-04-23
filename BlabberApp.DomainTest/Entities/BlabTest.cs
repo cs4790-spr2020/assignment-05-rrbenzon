@@ -7,10 +7,9 @@ namespace BlabberApp.DomainTest.Entities
     [TestClass]
     public class BlabTest
     {       
-        private Blab harness;
-        public BlabTest() 
+        private Blab harness = new Blab();
+        public void SetUp() 
         {
-            harness = new Blab();
         }
         [TestMethod]
         public void TestSetGetMessage()
@@ -33,7 +32,8 @@ namespace BlabberApp.DomainTest.Entities
             Guid actual = harness.Id;
             // Assert
             Assert.AreEqual(actual, expected);
-            Assert.AreEqual(true, harness.Id is Guid);
+            bool actualBool = harness.Id is Guid;
+            Assert.AreEqual(true, actualBool);
         }
         
         [TestMethod]
@@ -45,6 +45,22 @@ namespace BlabberApp.DomainTest.Entities
             Blab Actual = new Blab();
             // Assert
             Assert.AreEqual(Expected.DTTM.ToString(), Actual.DTTM.ToString());
+        }
+
+        [TestMethod]
+        public void TestValidation()
+        {
+            bool actual = harness.IsValid();
+            Assert.AreEqual(true, actual);
+        }
+
+        [TestMethod]
+        public void TestSetGetUser()
+        {
+            User testUser = new User("blab@test.com");
+            harness.User= (testUser);
+            User actual = harness.User;
+            Assert.AreEqual(testUser.ToString(), actual.ToString());
         }
     }
 }

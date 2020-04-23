@@ -13,7 +13,7 @@ namespace BlabberApp.DataStore.Plugins
         MySqlConnection dcBlab;
         public MySqlBlab()
         {
-            this.dcBlab = new MySqlConnection("server=142.93.114.73;database=donbstringham;user=donbstringham;password=letmein");
+            this.dcBlab = new MySqlConnection("server=142.93.114.73;database=rrbenzon;user=rrbenzon;password=letmein");
             try
             {
                 this.dcBlab.Open();
@@ -51,8 +51,7 @@ namespace BlabberApp.DataStore.Plugins
         {
             try
             {
-                // SELECT * FROM blabs WHERE blabs.dttm_created NOT over a week ago SORTED DESC BY blabs.dttm_created
-                string sql = "SELECT * FROM blabs";
+                string sql = "SELECT * FROM blabs order by dttm_created desc;";
                 MySqlDataAdapter daBlabs = new MySqlDataAdapter(sql, this.dcBlab); // To avoid SQL injection.
                 MySqlCommandBuilder cbBlabs = new MySqlCommandBuilder(daBlabs);
                 DataSet dsBlabs = new DataSet();
@@ -132,8 +131,16 @@ namespace BlabberApp.DataStore.Plugins
         public void Delete(IEntity obj)
         {
             Blab blab = (Blab)obj;
+            string sql = "Delete from blabs where sys_id = '" + blab.Id + "'";
+            MySqlCommand cmd = new MySqlCommand(sql, this.dcBlab);
+            cmd.ExecuteNonQuery();
         }
-        
+        public void DeleteAll()
+        {
+                string sql = "TRUNCATE TABLE blabs";
+                MySqlCommand cmd = new MySqlCommand(sql, this.dcBlab);
+                cmd.ExecuteNonQuery();
+        }
         private Blab DataRow2Blab(DataRow row)
         {
             User user = new User();

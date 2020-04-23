@@ -58,5 +58,9 @@ namespace BlabberApp.DataStore.Plugins
         {
             this.buffer.Remove(obj);
         }
+        public void DeleteAll()
+        {
+            this.buffer.Clear();
+        }
     }
 }

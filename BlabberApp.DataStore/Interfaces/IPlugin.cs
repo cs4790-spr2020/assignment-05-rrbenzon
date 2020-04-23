@@ -7,10 +7,10 @@ namespace BlabberApp.DataStore.Interfaces
     public interface IPlugin
     {
         void Create(IEntity obj);
+        IEnumerable ReadAll();
+        IEntity ReadById(Guid Id);
         void Update(IEntity obj);
         void Delete(IEntity obj);
-
-        IEnumerable ReadAll();
-        IEntity ReadById(Guid id);
+        void DeleteAll();
     }
 }

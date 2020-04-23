@@ -13,7 +13,7 @@ namespace BlabberApp.DataStore.Plugins
         MySqlConnection _dcUser;
         public MySqlUser()
         {
-            _dcUser = new MySqlConnection("server=142.93.114.73;database=donbstringham;user=donbstringham;password=letmein");
+            _dcUser = new MySqlConnection("server=142.93.114.73;database=rrbenzon;user=rrbenzon;password=letmein");
             try
             {
                 _dcUser.Open();
@@ -51,7 +51,7 @@ namespace BlabberApp.DataStore.Plugins
         {
             try
             {
-                string sql = "SELECT * FROM users";
+                string sql = "SELECT * FROM users order by dttm_registration desc;";
                 MySqlDataAdapter daUser = new MySqlDataAdapter(sql, _dcUser); // To avoid SQL injection.
                 MySqlCommandBuilder cbUser = new MySqlCommandBuilder(daUser);
                 DataSet dsUsers = new DataSet();
@@ -129,6 +129,13 @@ namespace BlabberApp.DataStore.Plugins
             } catch(Exception ex) {
                 throw new Exception(ex.ToString());
             }
+        }
+
+        public void DeleteAll()
+        {
+                string sql = "TRUNCATE TABLE users";
+                MySqlCommand cmd = new MySqlCommand(sql, _dcUser);
+                cmd.ExecuteNonQuery();
         }
 
         private User DataRow2User(DataRow row)
