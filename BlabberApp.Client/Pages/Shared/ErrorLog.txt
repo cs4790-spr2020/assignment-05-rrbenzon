@@ -96,3 +96,53 @@
    at BlabberApp.DataStore.Adapters.BlabAdapter.Add(Blab blab) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.DataStore\Adapters\BlabAdapter.cs:line 19
    at BlabberApp.Services.BlabService.AddBlab(Blab blab) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Services\BlabService.cs:line 17
    at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-04-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 33
+4/22/2020 3:30:25 PM- FeedModel::OnPost: BlabberApp.DataStore.Exceptions.UserAdapterNotFoundException: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 107: Not found
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 113
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 96
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 101
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31
+4/23/2020 5:33:55 PM- FeedModel::OnPost: System.Exception: System.FormatException: Email is invalid
+   at BlabberApp.Domain.Entities.User.ChangeEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Domain\Entities\User.cs:line 27
+   at BlabberApp.Domain.Entities.User..ctor(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Domain\Entities\User.cs:line 21
+   at BlabberApp.Services.UserService.CreateUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Services\UserService.cs:line 35
+   at BlabberApp.Services.UserService.AddNewUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Services\UserService.cs:line 25
+   at BlabberApp.Services.UserService.AddNewUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Services\UserService.cs:line 29
+   at BlabberApp.Client.Pages.RegisterModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Client\Pages\Register.cshtml.cs:line 32
+4/23/2020 5:33:57 PM- FeedModel::OnPost: System.Exception: System.FormatException: Email is invalid
+   at BlabberApp.Domain.Entities.User.ChangeEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Domain\Entities\User.cs:line 27
+   at BlabberApp.Domain.Entities.User..ctor(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Domain\Entities\User.cs:line 21
+   at BlabberApp.Services.UserService.CreateUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Services\UserService.cs:line 35
+   at BlabberApp.Services.UserService.AddNewUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Services\UserService.cs:line 25
+   at BlabberApp.Services.UserService.AddNewUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Services\UserService.cs:line 29
+   at BlabberApp.Client.Pages.RegisterModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Client\Pages\Register.cshtml.cs:line 32
+4/23/2020 5:34:39 PM- FeedModel::OnPost: BlabberApp.DataStore.Exceptions.UserAdapterNotFoundException: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 107: Not found
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 113
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 96
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 101
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31
+4/23/2020 5:34:40 PM- FeedModel::OnPost: BlabberApp.DataStore.Exceptions.UserAdapterNotFoundException: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 107: Not found
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 113
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 96
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 101
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31
+4/23/2020 5:34:40 PM- FeedModel::OnPost: BlabberApp.DataStore.Exceptions.UserAdapterNotFoundException: System.Exception: System.IndexOutOfRangeException: There is no row at position 0.
+   at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 107: Not found
+   at BlabberApp.DataStore.Plugins.MySqlUser.ReadByUserEmail(String Id) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Plugins\MySqlUser.cs:line 113
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 96
+   at BlabberApp.DataStore.Adapters.UserAdapter.GetByEmail(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.DataStore\Adapters\UserAdapter.cs:line 101
+   at BlabberApp.Services.UserService.FindUser(String email) in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Services\UserService.cs:line 40
+   at BlabberApp.Client.Pages.FeedModel.OnPost() in C:\Users\Rachel Benzon\Documents\.Net\Blabber\assignment-05-rrbenzon\BlabberApp.Client\Pages\Feed.cshtml.cs:line 31

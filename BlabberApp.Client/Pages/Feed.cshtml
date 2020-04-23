@@ -10,27 +10,47 @@
 <style>
 div.border {
   border-style: 2px solid;
+  padding:10px;
+  padding-left:20px;
+}
+.border li
+{
+    padding:10px;
+}
+.border li b
+{
+    color: blueviolet;
 }
 </style>
 <br><br>
-<h2>Enter your email and blab! If you have not registered, please click <a asp-area="" asp-page="/Register">here. </a></h2>
+<div  class = "smallWhiteBackground">
+<div class="enterBlab">
+<h2>Enter your email and blab!</h2><br>
 <p>Blabs must be kept under 500 characters. Happy Blabbing!</p>
-<br><br>
+<br>
 <section id="main">
     <form method="post">
-        <label>Email</label>
+        <label>Email:</label>
         <input type="email" name="emailaddress">
-        <br/>
-        <lable>Message</lable>
+        <br/><br>
+        <lable>Message:</lable>
         <input type="text" name="message">
-        <br/>
+        <br/><br>
         <input type="submit">
     </form>
+    <p> If you have not registered, please click <a asp-area="" asp-page="/Register">here. </a></p>
+    </div>
+    </div>
     <hr/>
-    <h1>Feed</h1>
+    <div class="black">
+    <h1 class = "centerTitle">Feed</h1>
+    </div>
+        <div  class = "whiteBackground">
+
     <div class="border" id="feed">
         @foreach (@Blab blab in @BlabService.GetAll()) {
         <li><b>@blab.User.Email.ToString()</b>: @blab.Message.ToString()</li>
     }
     </div>
 </section>
+    </div>

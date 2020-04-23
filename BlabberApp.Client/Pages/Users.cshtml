@@ -6,9 +6,13 @@
 @{
     ViewData["Title"] = "Users";
 }
-<h1>@ViewData["Title"]</h1>
-<p>
-    @foreach (@User user in @UserService.GetAll()) {
-        <li>@user.Email.ToString()</li>
-    }
-</p>
+
+<br>
+    <h1 class = "centerTitle">@ViewData["Title"]</h1>
+<div class = "whiteBackground">
+    <p>
+        @foreach (@User user in @UserService.GetAll()) {
+            <li class = "userList">@user.Email.ToString()</li>
+        }
+    </p>
+</div>

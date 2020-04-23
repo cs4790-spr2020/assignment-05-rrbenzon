@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using BlabberApp.Services;
 using BlabberApp.Domain.Entities;
+using System.IO;
+
 
 namespace BlabberApp.Client.Pages
 {
@@ -22,15 +24,24 @@ namespace BlabberApp.Client.Pages
 
         }
 
-        public void OnPost()
+        public IActionResult OnPost()
         {
             var email = Request.Form["emailaddress"];
             try
             {
                 _service.AddNewUser(email);
-            }catch(Exception e)
+                return new RedirectToPageResult("Users");
+            }catch(Exception ex)
             {
-                throw new Exception(e.ToString());
+                //throw new Exception(e.ToString());
+                string path = Directory.GetCurrentDirectory();
+                path = path + "/Pages/Shared";
+                using (StreamWriter outputFile = new StreamWriter(Path.Combine(path, "ErrorLog.txt"), true))
+                {
+                    outputFile.WriteLine(DateTime.Now + "- FeedModel::OnPost: " + ex.ToString());
+                }
+
+                return new RedirectToPageResult("Register");
             }
         }
     }

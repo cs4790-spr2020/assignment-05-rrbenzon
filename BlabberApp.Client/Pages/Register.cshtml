@@ -6,11 +6,16 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1><br>
-<h2>Please register your email. You must register before posting any blabs</h2><br>
+    <h1 class = "centerTitle">@ViewData["Title"]</h1><br>
 
-<form method = "post">
-    <label> Email: </label>
-    <input type="email" name="emailaddress">
-    <input type = "submit">
-</form>
+<div class = "smallWhiteBackground">
+    <h2 class = "smallTitle">Please register your email here.</h2><br>
+
+    <form method = "post">
+        <label> Email: </label>
+        <input type="email" name="emailaddress">
+        <input type = "submit">
+    </form>
+    <br>
+    <p>**You must register before posting any blabs</p>
+</div>
